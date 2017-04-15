@@ -124,9 +124,9 @@ The API is customized by Vishal. <br> This webpage will only work till Vishal's 
 So when will it expire ? How many days ? Well exacty - </p>
 <h2>
 <?php
-$wedding = strtotime("5 May 2017"); // or whenever the wedding is
+$end = strtotime("5 May 2017"); // or whenever the wedding is
 $now= strtotime("now");
-$secondsLeft = $wedding - $now;
+$secondsLeft = $end - $now;
 $days = floor($secondsLeft / (60*60*24));
 echo "$days days left";
 ?>
@@ -139,7 +139,7 @@ $k=$_POST["s"];
 for($i=0;$i<strlen($k);$i++)
 if($k[$i]==" ")
 $k[$i]=="%20";
-$s="http://dragon857.mybluemix.net/getaudiomsg?stralert=".$k;
+$s="YOUR_API".$k;   // for example - http://hello.mybluemix.net/getaudiomsg?stralert=
 }
 ?>
 <form method="post" action="texttospeech.php">
